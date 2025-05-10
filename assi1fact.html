@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic 3</title>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        table,
+        tr,
+        td {
+            background-color: red;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><label>Enter number:</label></td>
+            <td><input type="number" id="num"></td> <!-- Added id attribute -->
+        </tr>
+    </table>
+    <button type="button" onclick="distable(num.value)">Factorial Number</button>
+    <div id="table"></div>
+    <script>
+        "use strict"
+        function factorial(n) {
+            var fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        function distable(num) {
+            let str = `<table border="1"><tr><th>Number</th><th>Factorial</th></tr>`
+            for (let i = 1; i <= num; i++) {
+                str += `<tr><td>${i}</td><td>${factorial(i)}</td></tr>`
+
+            }
+            str += "</table>"
+            document.getElementById("table").innerHTML = str
+        }
+    </script>
+</body>
+
+</html>

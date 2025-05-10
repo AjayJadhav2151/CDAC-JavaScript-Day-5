@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        //using new Array() then don't use parseInt 
+        let arr = [];
+        var size = parseInt(prompt("Enter the size of Array"));
+        for(let i=0;i<size;i++){
+            arr.push(parseInt(prompt(`Enter the element ${i}`)));
+        }
+        for(let i=0;i<arr.length;i++){
+            document.write(arr[i]+" ");
+        } 
+        // document.write("<br/>"+"Using For in loop"+"<br/>");
+        // for(j in arr){
+        //     document.write(arr[j]+" ");
+        // }
+
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"Searching"+"<br/>")
+        // let search = parseInt(prompt("Enter the Value to search:"));
+        // document.write(search+" is found at index"+arr.indexOf(search));
+        // document.write("<br/>"+"if duplicate number"+"<br/>")
+        // document.write(search+" is found at index"+arr.lastIndexOf(search));
+        
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"Sorting"+"<br/>")
+        // function comparefun(a,b){
+        //     return a-b;
+        // }
+        // document.write("<br/>"+"Using Named Function: "+arr.sort(comparefun));
+        // document.write("<br/>");
+        // document.write("<br/>"+"Using anonymous Function: "+arr.sort(function(a,b){return a-b}));
+        // document.write("<br/>");
+        // document.write("<br/>"+"Using arrow Function: "+arr.sort((a,b)=>a-b));
+
+        // document.write("<br/>");
+        // document.write("<br/>"+"Display ForEach bulleted"+"<br/>")
+        // function myiter(v){
+        //     document.write("<li>"+v+"<li>");
+        // }
+        // document.write("<ul>");  
+        // document.write("Using Named Function: "+arr.forEach(myiter));
+        // document.write("</ul>");  
+        // document.write("<ul>");  
+        // document.write("Using anonymous Function: "+arr.forEach(function(v){document.write("<li>"+v+"<li>")}));
+        // document.write("</ul>");  
+        // document.write("<ul>");  
+        // document.write("Using arrow Function: "+arr.forEach((v)=> document.write("<li>"+v+"<li>")));
+        // document.write("</ul>");  
+        
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"Reduce"+"<br/>")
+        // var sum = arr.reduce((s,v)=>s+v);
+        // document.write("Sum of all elements in array is: "+sum+"<br/>");
+        // var max = arr.reduce((s,v)=>v>s?v:s);
+        // document.write("Max of all elements in array is: "+max+"<br/>");
+        // var min = arr.reduce((s,v)=>v<s?v:s);
+        // document.write("Min of all elements in array is: "+min+"<br/>");
+
+        // var avg1=arr.reduce((s,v,i)=>(s*i+v)/(i+1));
+        // var avg2=arr.reduce((a,b)=>a+b)/arr.length;
+        // document.write("Avg of all elements in array is: "+avg1+"<br/>");
+        // document.write("Avg of all elements in array is: "+avg2+"<br/>");
+        
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"All Even"+"<br/>")
+        // var alleven = arr.every(v=>v%2==0);
+        // document.write("All Even of all elements in array is: "+alleven+"<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"All odd"+"<br/>")
+        // var allodd = arr.every(v=>v%2!=0);
+        // document.write("All Odd of all elements in array is: "+allodd+"<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"Some Even"+"<br/>")
+        // var someeven = arr.some(v=>v%2==0);
+        // document.write("All Even of all elements in array is: "+someeven+"<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>");
+        // document.write("<br/>"+"Some odd"+"<br/>")
+        // var someodd = arr.some(v=>v%2!=0);
+        // document.write("All Odd of all elements in array is: "+someodd+"<br/>");
+
+        document.write("<br/>");
+        document.write("<br/>");
+        document.write("<br/>"+"Prime"+"<br/>")
+        function isPrime(num) {
+            var flag = [];
+            var flag1 = [];
+            if (num < 2) {
+                flag.push(num);
+            }
+            for (let i = 2; i < num; i++) { 
+                if (num % i == 0) {
+                    flag.push(num);
+                }
+                else{
+                    flag1.push(num);
+                }
+            }
+            document.write(flag + " is prime"+"<br/>"); 
+            document.write(flag1 + " is Not prime");
+        }
+        var prime=arr.every((v)=>isPrime(v));
+    </script>
+</body>
+</html>

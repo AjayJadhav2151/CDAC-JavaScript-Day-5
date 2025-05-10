@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="num">
+    <button onclick="calFact(num.value)">Click me</button>
+    <div id="result"></div>
+    <script>
+        function myFun(n) {
+            let fact = 1;
+            for (i = 1; i <= n; i++) {
+
+                fact *= i
+            }
+            return fact;
+        }
+        function calFact(num) {
+            let str = `<table border="1"><tr><th>Number</th><th>Factorial</th></tr>`
+            for (let i = 1; i <= num; i++) {
+                str += `<tr><td>${i}</td><td>${myFun(i)}</td></tr>`
+            }
+            str+=`</table>`
+            document.getElementById('result').innerHTML=str;
+        }
+    </script>
+</body>
+
+</html>
